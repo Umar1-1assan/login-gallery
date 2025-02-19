@@ -1,0 +1,255 @@
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: rgb(255, 255, 255);
+}
+.navbar {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    color: black;
+    justify-content: center;
+}
+.navbar li {
+    float: none;
+}
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar li:hover {
+    background-color: red;
+}
+
+.heading {
+    position: relative; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: px; 
+    width: 100%; 
+ 
+    background-color: #000000; 
+}
+
+.heading h1 {
+    color: white;
+}
+
+.heading p {
+    position: absolute; 
+    right: 30px; 
+    color: white;
+    cursor: pointer; 
+}
+
+/*gallery */
+.artgallery {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.heading2 h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.pictures img:hover {
+    transform: scale(1.05);
+}
+.pictures img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+
+/* background video*/
+.background.video {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+.background.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.overlay-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.overlay-text p {
+    font-size: 1.5rem;
+}
+
+/*footer */
+.footer {
+    background-color: #222; /* Dark background for contrast */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.4rem;
+    margin-top: 30px;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar li a {
+        padding: 12px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .pictures {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .pictures img {
+        height: 200px;
+    }
+
+    .overlay-text {
+        font-size: 1.5rem;
+        text-align: center;
+        width: 90%;
+    }
+    .background.video{
+        height: 40vh;
+    }
+    .overlay-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .overlay-text p {
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        font-size: 1.2rem;
+        padding: 12px 0;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .heading h1 {
+        font-size: 1.8rem;
+        padding: 12px;
+    }
+    .background.video{
+        height: 30vh;
+    }
+
+    .pictures {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller grid */
+        gap: 8px;
+    }
+
+    .pictures img {
+        height: 150px;
+        border-radius: 5px;
+    }
+
+    .background.video {
+        height: 40vh; /* Reduce video height */
+    }
+
+    .overlay-text {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 90%;
+    }
+
+    .overlay-text h1 {
+        font-size: 2rem;
+    }
+
+    .overlay-text p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+}
